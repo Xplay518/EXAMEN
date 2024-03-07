@@ -1,15 +1,41 @@
-<html>
-  <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precio Total</title>
+</head>
+<body>
+    <h1>Calculadora de Precio Total</h1>
+    <form id="calculo-form">
+        <label for="cantidad-items">Cantidad de Ítems:</label>
+        <input type="number" id="cantidad-items" required />
+
+        <label for="precio-item">Precio por Ítem:</label>
+        <input type="number" id="precio-item" required />
+
+        <label for="estado">Código de Estado:</label>
+        <!-- Aquí podría ir una lista desplegable con los códigos de estado -->
+        <select id="estado" required>
+            <option value="CA">California</option>
+            <!-- Otras opciones de estados aquí -->
+        </select>
+
+        <label for="categoria">Categoría de Producto:</label>
+        <!-- Lista desplegable con las categorías de producto -->
+        <select id="categoria" required>
+            <option value="Varios">Varios</option>
+            <!-- Otras opciones de categorías aquí -->
+        </select>
+
+        <label for="peso-volumetrico">Peso Volumétrico por Unidad:</label>
+        <input type="number" id="peso-volumetrico" required />
+
+        <button type="submit">Calcular Precio Total</button>
     </form>
+
     <div id="resultado-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
-  </body>
+</body>
 </html>
